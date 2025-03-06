@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { WalletService } from "../services/walletService";
+import { WalletService } from "../services/walletService.js";
 import { z } from "zod";
-import { logger } from "../core/logger";
+import { logger } from "../core/logger.js";
 
 const changeSchemaValidation = z.object({
   userId: z.string().uuid(),

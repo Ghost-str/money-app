@@ -1,4 +1,4 @@
-import { get } from "lodash";
+import _ from "lodash";
 
 export function isConstraintError(error: unknown, constraintName: string) {
   if (!(error instanceof Error)) {
@@ -6,7 +6,7 @@ export function isConstraintError(error: unknown, constraintName: string) {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-  const value = get(error, "original.message") as unknown;
+  const value = _.get(error, "original.message") as unknown;
 
   if (typeof value !== "string") {
     return false;

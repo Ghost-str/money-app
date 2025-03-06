@@ -1,5 +1,5 @@
 import { SequelizeStorage, Umzug } from "umzug";
-import { orm } from "./orm";
+import { orm } from "./orm.js";
 
 export async function migrate() {
   const umzung = new Umzug({

@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import { orm } from "../core/orm";
+import { orm } from "../core/orm.js";
 
 export const BALANCE_CHECK_CONSTRAINT_NAME = "users_balance_gte_0";
 

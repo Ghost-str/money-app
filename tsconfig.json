@@ -2,8 +2,10 @@
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
     "baseUrl": "./",
-    "outDir": "dist"
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "target": "ES2024",
+    "module": "Node16"
   }
 }

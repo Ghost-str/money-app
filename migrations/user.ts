@@ -16,7 +16,7 @@ export async function up({
       allowNull: false,
     },
     balance: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
     createdAt: {

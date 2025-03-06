@@ -1,7 +1,7 @@
 import { Op } from "sequelize";
-import { logger } from "../core/logger";
-import { BALANCE_CHECK_CONSTRAINT_NAME, User } from "../models/user";
-import { isConstraintError } from "../core/ormErrorAnalyze";
+import { logger } from "../core/logger.js";
+import { BALANCE_CHECK_CONSTRAINT_NAME, User } from "../models/user.js";
+import { isConstraintError } from "../core/ormErrorAnalyze.js";
 
 type ChangeBalanceData = {
   userId: string;
