@@ -1,6 +1,6 @@
 async function test() {
   const arr = new Array(10000).fill(0).map(async () => {
-    return await fetch("http://localhost:3000/change-many", {
+    const response = await fetch("http://localhost:3000/change-many", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -10,6 +10,14 @@ async function test() {
         amount: -2,
       }),
     });
+
+    if (response.status > 299) {
+      const body = await response.text();
+      console.log("status", response.status);
+      console.log("body", body);
+    }
+
+    return response;
   });
 
   const result = await Promise.allSettled(arr);

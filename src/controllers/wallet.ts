@@ -26,7 +26,10 @@ export function changeWalletAmount(req: Request, res: Response) {
         res.status(200).send();
         return;
       } else {
-        res.status(400).send();
+        res.status(400).json({
+          type: "error",
+          message: result.reason,
+        });
       }
     })
     .catch((error: unknown) => {
